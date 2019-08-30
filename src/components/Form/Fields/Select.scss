@@ -1,0 +1,23 @@
+.field--select{
+
+    position: relative;
+
+    .field__select{
+        display: grid;
+        grid-gap: 20px;
+        grid-template-columns: repeat(5, calc(20% - 20px));
+    }
+
+    .field__option{
+        padding: 15px;
+        border: 1px solid rgba(0,0,0,.3);
+        cursor: pointer;
+        box-sizing: border-box;
+        text-align: center;
+        &--active{
+            @extend .field__option;
+            background: rgba(248,83,6,.7);
+        }
+    }
+
+}

@@ -4,13 +4,17 @@ class Field extends React.Component{
 
     render = () => {
         return (
-            <div className="field--date">
+            <label className="field--checkbox">
                 <input
-                    type="date"
+                    className="field__input"
+                    type="checkbox"
                     value={this.props.value}
                     onChange={(e)=>this.props.onChange(e.target.value)}
                 />
-            </div>
+                <span className="field__label">
+                    { this.props.label }
+                </span>
+            </label>
         );
     };
 
